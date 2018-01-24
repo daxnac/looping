@@ -73,8 +73,6 @@
     // TODO: set howMany variable to a value user inputs
     var howMany = prompt("How many rides?")
     var rideNum = parseInt(howMany)
-    var howManyTimes = prompt("How many times?")
-    var timeNum = parseInt(howManyTimes)
     var counter = 1
 
     var pauseLoop = function() {
@@ -89,7 +87,7 @@
 
             console.log("Wheee! This is the ", counter, " time we've done this!");
             
-            // display the message under the looped image
+            // display the message under each image
             document.getElementById("message").innerHTML = "Wheee! This is the " + counter + " time we've done this!";
             
             // find value of counter modulo length of sources array-
