@@ -14,6 +14,7 @@
     img {
       max-width: 100%;
     }
+    
     .imgContainer {
       width: 35rem;
     }
@@ -38,14 +39,13 @@
 </head>
 <body>
   <h1>Roller Coaster Ride</h1>
-  <p>Come join me for an exciting roller coaster ride. Check out all the rides.</p>  
+  <p>Come join me for an exciting roller coaster ride. Check these rides out.</p>  
   <div class="imgContainer">
     <img id="roller" src="" alt="roller coaster">
     <div id="message"></div>
   </div>
   
   <script>
-
     // When complete, this program will ask the user how many roller coaster rides
     // they'd like to go on, then execute a block of code that many times.
     // The block will output which "ride" they're on, and change which image
@@ -56,8 +56,9 @@
     // There are explanatory comments thoughout. The work that still needs to be done
     // is noted in TODO comments. Please complete this work.
     
-    var headColor = document.getElementsByTagName("h1");
-    document.documentElement.className = 'red';
+    // Challenge 1: add a class of "red" to the <h1>
+    var headerColor = document.getElementsByTagName("h1");
+    document.documentElement.className = "red";
 
     // an array of possible image source values
     var imageSources = [
@@ -76,15 +77,15 @@
     var counter = 1
 
     var pauseLoop = function() {
-
+       
       // TODO: execute this loop the number of times user requested
       while (counter <= rideNum) { 
-                      
+        
         (function(counter) { 
           
           // Challenge 3: Start 2000ms pause to each increment
-          setTimeout(function()  {
-
+          setTimeout(function()  { 
+            
             console.log("Wheee! This is the ", counter, " time we've done this!");
             
             // display the message under each image
@@ -102,14 +103,15 @@
             counter = counter + 1;
   
           }, 2000 * counter);
-          
+                   
         })(counter++);  
-      
+
       };
-                                                 
+                                     
     };
     
     pauseLoop();
+    
         
     // EXTRA CHALLENGES:
     // 1. Using JS, add a class of "red" to the <h1>.
